@@ -1,0 +1,33 @@
+Sparsity measures:
+
+entropy based: not accurate. value range diverse more from 0 ~ 1.
+
+gini: http://arxiv.org/pdf/0811.4706.pdf, or P(z|w), value is high generally.
+
+N*N KL-divergence
+
+
+perf1. add beta factor into infoRate computation - done.
+perf2. ???
+
+perplexity - why new and old are the same?
+- because rare words are leveraged as context words are lowered.
+
+1. probability-percentile to percentage of words chart
+2. perplexity (current not good - noise word leveraged, see if perf.1 works)
+3. sparsity measure with prior removed ie. ignore words with very low probs
+4. human readable topic representation.
+   context word (the, marketwatch) are removed.
+   context like but actual content "japan" still there.
+   long-term topics still there.
+   short term topics have higher quality.
+5. time efficiency: todo
+6. applications
+   document classification - ?
+   topic analysis should be the focus -
+   topic label - nothing matter
+   
+   percentile line
+   union of the union of top k words
+   word appear in top word list in multiple topics
+    
